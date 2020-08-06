@@ -1,0 +1,5 @@
+.editorconfig
+.prettierrc
+.env
+
+node_modules
