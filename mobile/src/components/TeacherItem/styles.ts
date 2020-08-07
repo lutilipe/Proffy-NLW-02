@@ -29,6 +29,7 @@ export const Name = styled.Text`
   font-family: 'Archivo_700Bold';
   color: #32264d;
   font-size: 20px;
+  max-width: 140px;
 `
 
 export const Subject = styled.Text`

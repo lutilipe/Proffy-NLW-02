@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import {
   Container,
@@ -14,7 +14,7 @@ import {
 
 import { AppLoading } from 'expo'
 import { Image } from 'react-native'
-
+import api from '../../services/api'
 import { useNavigation } from '@react-navigation/native'
 
 import {
@@ -35,6 +35,14 @@ import heartIcon from '../../assets/images/icons/heart.png'
 
 const Landing: React.FC = () => {
   const { navigate } = useNavigation()
+  const [connections, setConnections] = useState(0)
+
+  useEffect(() => {
+    api.get('/connections').then((response) => {
+      const { total } = response.data
+      setConnections(total)
+    })
+  }, [])
 
   let [fontsLoaded] = useFonts({
     Archivo_400Regular,
@@ -77,7 +85,7 @@ const Landing: React.FC = () => {
         </ButtonsContainer>
 
         <TotalConnections>
-          Total de 285 conexões <Image source={heartIcon} />
+          Total de {connections} conexões <Image source={heartIcon} />
         </TotalConnections>
       </Container>
     )
