@@ -1,7 +1,7 @@
 <a href='https://github.com/lutilipe/Proffy-NLW-02'>
   <p align="center" style="border-radius:6px">
     <kbd>
-    <img width="680" height="auto" src='https://github.com/lutilipe/Proffy-NLW-02/blob/master/web/src/assets/images/landing.svg'>
+    <img width="520" height="auto" src='https://github.com/lutilipe/Proffy-NLW-02/blob/master/web/src/assets/images/landing.svg'>
     </kbd>
   </p>
 </a>
